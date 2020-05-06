@@ -1,0 +1,14 @@
+{
+  "name": "hello-express",
+  "version": "1.0.0",
+  "main": "dist/main.js",
+  "license": "CC-PDDC",
+  "type": "module",
+  "dependencies": {
+    "@types/node": "^13.13.5",
+    "express": "^4.17.1"
+  },
+  "scripts": {
+    "server": "node --experimental-modules ./dist/main.js"
+  }
+}

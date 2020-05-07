@@ -5,7 +5,10 @@
     "target": "ES2019",
     "sourceMap": true,
     "rootDir": ".",
-    "outDir": "dist"
+    "outDir": "dist",
+    "alwaysStrict": true,
+    "strict": true,
+    "allowSyntheticDefaultImports": true
   },
   "exclude": [
     "node_modules"

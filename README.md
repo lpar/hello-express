@@ -2,13 +2,14 @@
 # hello-express
 
 _An example legacy-free Node.js, Express, TypeScript legacy-free hello world 
-project._
+project with explicitly typed parameters in callbacks._
 
 ## What is this?
 
-This is a version of the [Express][ex] framework's ["Hello world" example][hello] updated to:
+This is a version of an [Express][ex] framework "Hello world" example updated to:
 
- - Use [TypeScript][ts], because [catching errors at compile time is good][tswhy].
+ - Use [TypeScript][ts] and explicitly declare the types of callback parameters, 
+ because [catching errors at compile time is good][tswhy].
  - Use standard (post-2015 ES6) [modules][mod], because standardization is good.
  - Use [Yarn][yarn] for package management, because community is good.
 
@@ -31,6 +32,8 @@ Here are the key "tricks", some of which are still poorly or inaccurately docume
  3. You need to enable ES6+ modules in TypeScript by setting `"module": "es6"` in `tsconfig.json`.
  4. After doing that, the default module resolution for TypeScript is "classic" so you have to set 
  `"moduleResolution": "Node"` in `tsconfig.json` as well.
+ 5. Since Express isn't packaged as an ES6 module yet, you need to set 
+    `"allowSyntheticDefaultImports": true` in `tsconfig.json` so you can import the main `express` function.
 
 If you skip #2 above, you'll get an error like this:
 

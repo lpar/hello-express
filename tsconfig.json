@@ -4,7 +4,7 @@
     "moduleResolution": "Node",
     "target": "ES2019",
     "sourceMap": true,
-    "rootDir": ".",
+    "rootDir": "src",
     "outDir": "dist",
     "alwaysStrict": true,
     "strict": true,

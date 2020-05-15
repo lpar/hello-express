@@ -40,10 +40,10 @@ Also included are some IntelliJ IDEA configs so you can push a button to run.
 Here are the key "tricks", some of which are still poorly or inaccurately documented on the web:
 
  1. You need to put `"type": "module"` in `package.json` to allow standard module imports in Node.js, as of Node 12.x.
- 2. Even after doing that, you still need to use the `--experimental-modules` command line flag to enable ESM, so that 
-    your application's main compiled code can be loaded in module mode.
- 3. ...and `--experimental-specifier-resolution=node` so you can load modules within your application without having to
-    specify the filename extension or rename `js` files to `mjs`.
+ 2. Even after doing that, you still need to use the `--experimental-modules` command line flag to enable ESM on LTS 
+    versions of Node (e.g. 12.x), so that your application's main compiled code can be loaded in module mode.
+ 3. ...and `--experimental-specifier-resolution=node` even with Node 14, so you can load modules within your application 
+    without having to specify the filename extension or rename `js` files to `mjs`.
  4. You need to enable ES6+ modules in TypeScript by setting `"module": "es6"` in `tsconfig.json`.
  5. After doing that, the default module resolution for TypeScript is "classic" so you have to set 
     `"moduleResolution": "Node"` in `tsconfig.json` as well.
